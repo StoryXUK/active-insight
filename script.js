@@ -1,5 +1,5 @@
 /* Paste your deployed Google Apps Script Web App URL between the quotes. */
-const GOOGLE_APPS_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzl-rX1lqMPAwjrsdEzk1BME_kcOdvI1ypEYE2LI8vYgeZaLIa8-SIcL80Uznu6EoPW/exec";
 
 /* Replace these sample names with the final attendee lists. */
 const suppliers = [
