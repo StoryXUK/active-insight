@@ -15,6 +15,7 @@ const operators = [
 ];
 
 const form = document.querySelector("[data-meeting-form]");
+const REQUIRED_SELECTIONS = 10;
 
 if (form) {
   const audience = document.body.dataset.audience;
@@ -33,9 +34,13 @@ if (form) {
   }
 
   function updateCount() {
-    count.textContent = selected.size;
-    countBadge.textContent = `${selected.size} selected`;
-    submitButton.disabled = selected.size === 0;
+    count.textContent = `${selected.size} / ${REQUIRED_SELECTIONS}`;
+    countBadge.textContent = `${selected.size} / ${REQUIRED_SELECTIONS} selected`;
+    submitButton.disabled = selected.size !== REQUIRED_SELECTIONS;
+
+    grid.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+      checkbox.disabled = selected.size >= REQUIRED_SELECTIONS && !checkbox.checked;
+    });
   }
 
   function render(filter = "") {
@@ -62,6 +67,8 @@ if (form) {
       label.appendChild(checkbox);
       grid.appendChild(label);
     });
+
+    updateCount();
   }
 
   search.addEventListener("input", event => render(event.target.value));
@@ -70,6 +77,12 @@ if (form) {
   form.addEventListener("submit", async event => {
     event.preventDefault();
     errorMessage.hidden = true;
+
+    if (selected.size !== REQUIRED_SELECTIONS) {
+      errorMessage.textContent = `Please select exactly ${REQUIRED_SELECTIONS} organisations before submitting.`;
+      errorMessage.hidden = false;
+      return;
+    }
 
     if (GOOGLE_APPS_SCRIPT_URL.includes("PASTE_YOUR")) {
       errorMessage.textContent = "Add your Google Apps Script URL to script.js before submitting.";
