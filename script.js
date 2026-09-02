@@ -1,17 +1,68 @@
 /* Paste your deployed Google Apps Script Web App URL between the quotes. */
 const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxsOMVMrpzH_qzuOrWfqYS5HHGENvHzWbg30fsEAJGtkW802kjqml15N8sQGRaRkAyE/exec";
 
-/* Replace these sample names with the final attendee lists. */
 const suppliers = [
-  "Alliance Leisure", "Bigwave Marketing", "CIMSPA", "Concept Fitness International",
-  "Gladstone", "Gym Equipment Ltd", "Life Fitness", "Myzone", "Perfect Gym",
-  "Pulse Fitness", "Technogym", "Xplor Gym"
+  "4Global",
+  "Active-Insight",
+  "Alliance Leisure",
+  "Bigwave",
+  "CIMSPA",
+  "Cornerstone",
+  "Egym Hussle",
+  "Egym",
+  "Evolve",
+  "Fibodo",
+  "Future Fit for Business",
+  "HireBob.ai",
+  "Hutchison",
+  "InBody",
+  "IndigoFitness",
+  "Innerva",
+  "Integratis Consulting",
+  "Johnson Tech",
+  "MOWL",
+  "MyFitApp",
+  "Pulse Fitness",
+  "Qualified Trainers",
+  "Rent Gym Equipment",
+  "Right Directions",
+  "Risk HQ",
+  "RLSS UK",
+  "Scottish Swimming",
+  "SECA",
+  "Space Place",
+  "Sportmax",
+  "STA",
+  "Taylor Made Designs & Blu Leisure",
+  "UKActive",
+  "Xplor Technologies",
+  "Xn Leisure",
+  "LED Snaps"
 ];
 
 const operators = [
-  "Active Luton", "Better", "Circadian Trust", "Everyone Active", "Freedom Leisure",
-  "Glasgow Life", "GLL", "Halo Leisure", "LED Community Leisure", "Places Leisure",
-  "South Downs Leisure", "Wiltshire Council Leisure"
+  "AngusAlive",
+  "Clackmannanshire Council",
+  "Edinburgh Leisure",
+  "Fife Sports and Leisure Trust",
+  "Renfrewshire Council",
+  "Wave Active",
+  "Enjoy East Ren",
+  "SRUC",
+  "High Life Highland",
+  "North Lanarkshire",
+  "Glasgow Life",
+  "Live Life Aberdeenshire",
+  "Leisure and Culture Dundee",
+  "Strathclyde",
+  "Inverclyde Leisure",
+  "South Ayrshire",
+  "Derry Strabane",
+  "South Lanarkshire Leisure",
+  "East Dunbarton",
+  "Alliance Leisure",
+  "KA Leisure",
+  "Sport Aberdeen"
 ];
 
 const form = document.querySelector("[data-meeting-form]");
