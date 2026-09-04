@@ -45,7 +45,7 @@ const operators = [
   "Clackmannanshire Council",
   "Edinburgh Leisure",
   "Fife Sports and Leisure Trust",
-  "Renfrewshire Council",
+  "OneRen",
   "Wave Active",
   "Enjoy East Ren",
   "SRUC",
