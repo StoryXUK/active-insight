@@ -1,1 +1,37 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Supplier preferences | fibodo</title><link rel="stylesheet" href="styles.css"></head><body data-role="Supplier"><main class="wrap"><header><a class="back" href="index.html">← Back</a><div class="brand">fibodo<span>.</span></div><p class="eyebrow">SUPPLIER MEETING PREFERENCES</p><h1>Who would you like to meet?</h1><p class="intro">Select as many operators as you like.</p></header><section class="panel"><form id="meetingForm"><label for="business">Your business name <span aria-hidden="true">*</span></label><select id="business" required><option value="">Select your business</option></select><a id="ownWebsite" class="own-website" target="_blank" rel="noopener noreferrer" hidden></a><div class="listheading"><h2>Choose operators</h2><span id="count">0 selected</span></div><input id="search" type="search" placeholder="Search operators…" aria-label="Search operators"><div id="options" class="options"></div><p id="status" class="status" role="status" aria-live="polite"></p><button id="submit" type="submit">Submit meeting preferences →</button></form></section><footer>Powered by fibodo</footer></main><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Supplier preferences | fibodo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-role="Supplier">
+    <main class="wrap">
+        <header><a class="back" href="index.html">← Back</a>
+            <div class="brand">fibodo<span>.</span></div>
+            <p class="eyebrow">SUPPLIER MEETING PREFERENCES</p>
+            <h1>Who would you like to meet?</h1>
+            <p class="intro">Select as many operators as you like.</p>
+        </header>
+        <section class="panel">
+            <form id="meetingForm"><label for="business">Your business name <span
+                        aria-hidden="true">*</span></label><select id="business" required>
+                    <option value="">Select your business</option>
+                </select><a id="ownWebsite" class="own-website" target="_blank" rel="noopener noreferrer" hidden></a>
+                <div class="listheading">
+                    <h2>Choose operators</h2><span id="count">0 selected</span>
+                </div><input id="search" type="search" placeholder="Search operators…" aria-label="Search operators">
+                <div id="options" class="options"></div>
+                <p id="status" class="status" role="status" aria-live="polite"></p><button id="submit"
+                    type="submit">Submit meeting preferences →</button>
+            </form>
+        </section>
+        <footer>Powered by fibodo</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

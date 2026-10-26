@@ -16,6 +16,7 @@ const suppliers = [
   "HireBob.ai",
   "Hutchison",
   "InBody",
+  "Industry Wake",
   "IndigoFitness",
   "Innerva",
   "Integratis Consulting",
@@ -39,6 +40,10 @@ const suppliers = [
   "Xn Leisure",
   "LED Snaps"
 ];
+
+const supplierWebsites = {
+  "Industry Wake": "https://www.industrywake.co.uk/"
+};
 
 const operators = [
   "AngusAlive",
@@ -102,7 +107,12 @@ if (form) {
       const label = document.createElement("label");
       label.className = "company-option";
       label.htmlFor = safeId(name);
-      label.innerHTML = `<span class="company-mark" aria-hidden="true">${name.charAt(0)}</span><span>${name}</span>`;
+      const website = audience === "operator" ? supplierWebsites[name] : null;
+      label.innerHTML = `<span class="company-mark" aria-hidden="true">${name.charAt(0)}</span><span class="company-details"><span>${name}</span>${website ? `<a class="company-website" href="${website}" target="_blank" rel="noopener noreferrer">Visit website</a>` : ""}</span>`;
+
+      label.querySelector(".company-website")?.addEventListener("click", event => {
+        event.stopPropagation();
+      });
 
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
